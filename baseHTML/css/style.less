@@ -1,0 +1,246 @@
+@pk-blue: #3483CB; 
+@pk-orange: #EF5A46; 
+@pk-yellow: #FDD345; 
+@pk-green: #34C17D; 
+@pk-dark-blue: #1B4A75; 
+
+body {
+	color: #fff;
+	background: url("../assets/background.jpg") right center no-repeat;
+}
+
+.clearer{ 
+	clear: both;
+}
+
+.float-left {
+	float: left;
+}
+.float-right {
+	float: right;
+}
+
+.header {
+	background: url("../assets/header_background.png") center;
+	background-size: cover;
+	height: 700px;
+
+	.site-logo {
+		margin: 100px 0 0 0;
+		width: 300px;
+	}
+
+	.site-tagline {
+		margin: 100px 0 0 0;
+		font-size: 4em;
+	}
+}
+
+.home {
+
+	#content {
+		margin: 100px 0 0 0;
+
+		.project-thumbnail {
+			max-width: 100%;
+			width: 100%;
+		}
+
+		.project-row {
+			clear: both;
+			
+			.project {
+				margin-bottom: 12px; 
+			}
+		}
+	}
+	
+	.testamonials {
+
+		margin-top: 100px;
+		color: @pk-blue;
+
+		p {
+			font-size: 2.5em;
+		}
+
+		
+		.center {
+			padding: 20px 0 0 50px;
+			background: url("../assets/quote.jpg") no-repeat;
+			float: none;
+			margin: 0 auto;
+		}
+
+		.author {
+			color: @pk-orange;
+			font-size: 1.6em;
+    		text-transform: uppercase;
+    		margin:20px 0;
+		}
+
+		a {
+			color: @pk-dark-blue;
+			font-size: 1.1em;
+			display: inline-block;
+			margin-top: 10px;
+			background-color: @pk-yellow;
+    		text-transform: uppercase;
+    		padding: 20px;
+    		-webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.25);
+			-moz-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.25);
+			box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.25);
+		}
+	}
+
+	.services {
+
+		margin-top: 130px;
+		color: @pk-blue;
+		
+		p {
+			font-size: 1.4em;
+		}
+
+		h3 {
+			margin-top: 0;
+		}
+
+		.circle {
+			border-radius: 50%;
+			width: 100px;
+			height: 100px; 
+		}
+
+		.rectangle {
+			border-radius: 25%;
+			width: 150px;
+			height: 150px;
+			margin: 80px auto 40px; 
+		}
+
+		.rectangle-blue {
+			background: @pk-dark-blue;
+		}
+
+		.rectangle-green {
+			background: @pk-green;
+		}
+
+
+		.service {
+			margin-top: 120px;
+			clear: both;
+		}
+
+		#service-1 {
+			.circle {
+				background: @pk-blue;
+			}
+		}
+
+		#service-2 {
+			.circle {
+				background: @pk-orange;
+			}
+		}
+
+		#service-3 {
+			.circle {
+				background: @pk-yellow;
+			}
+		}
+
+		.workshop {
+			text-align: center;
+
+			p {
+				color: @pk-blue;
+			}
+		}
+
+		#ux-workshop h3 {
+			color: @pk-dark-blue;
+			font-size: 2em;
+		}
+
+		#pk-evergreen h3 {
+			color: @pk-green;
+			font-size: 2em;
+		}
+
+	}
+
+	.team {
+
+		margin-top: 100px;
+		display: flex;
+		align-items: stretch;
+
+		.instagram-intro {	
+
+			margin-bottom: 12px; 
+			width: 400px;
+
+			.content{
+				padding: 10px 30px;
+				background-color: @pk-blue;
+				height: 270px;
+
+				p {
+					font-size: 1.6em;
+					font-weight: lighter;
+				}
+			}
+		}
+		
+		.instafeed {
+			height: 300px;
+		}
+
+		.instagram-photo {
+			margin-bottom: 12px;
+		}
+		
+		.instagram-meet-team {
+			background-color: @pk-yellow;
+			color: @pk-dark-blue;
+			padding: 30px;
+			height: 270px;
+		}
+
+		img {
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+}
+
+
+.footer {
+	background: @pk-blue;
+	height: 500px;
+	margin: 100px 0 0 0;
+
+	.center {
+		float: none;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.logo {
+		font-size: 3em;
+		margin: 117px 0 50px 0;
+	}
+
+	.hello {
+		font-size: 3em;
+	}
+
+	.email {
+		font-size: 1.5em;
+		font-weight: lighter;
+		color: #fff;
+	}
+
+}

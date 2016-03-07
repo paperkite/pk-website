@@ -1,0 +1,180 @@
+body {
+  color: #fff;
+  background: url("../assets/background.jpg") right center no-repeat;
+}
+.clearer {
+  clear: both;
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.header {
+  background: url("../assets/header_background.png") center;
+  background-size: cover;
+  height: 700px;
+}
+.header .site-logo {
+  margin: 100px 0 0 0;
+  width: 300px;
+}
+.header .site-tagline {
+  margin: 100px 0 0 0;
+  font-size: 4em;
+}
+.home #content {
+  margin: 100px 0 0 0;
+}
+.home #content .project-thumbnail {
+  max-width: 100%;
+  width: 100%;
+}
+.home #content .project-row {
+  clear: both;
+}
+.home #content .project-row .project {
+  margin-bottom: 12px;
+}
+.home .testamonials {
+  margin-top: 100px;
+  color: #3483cb;
+}
+.home .testamonials p {
+  font-size: 2.5em;
+}
+.home .testamonials .center {
+  padding: 20px 0 0 50px;
+  background: url("../assets/quote.jpg") no-repeat;
+  float: none;
+  margin: 0 auto;
+}
+.home .testamonials .author {
+  color: #ef5a46;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+.home .testamonials a {
+  color: #1b4a75;
+  font-size: 1.1em;
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #fdd345;
+  text-transform: uppercase;
+  padding: 20px;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.home .services {
+  margin-top: 130px;
+  color: #3483cb;
+}
+.home .services p {
+  font-size: 1.4em;
+}
+.home .services h3 {
+  margin-top: 0;
+}
+.home .services .circle {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+.home .services .rectangle {
+  border-radius: 25%;
+  width: 150px;
+  height: 150px;
+  margin: 80px auto 40px;
+}
+.home .services .rectangle-blue {
+  background: #1b4a75;
+}
+.home .services .rectangle-green {
+  background: #34c17d;
+}
+.home .services .service {
+  margin-top: 120px;
+  clear: both;
+}
+.home .services #service-1 .circle {
+  background: #3483cb;
+}
+.home .services #service-2 .circle {
+  background: #ef5a46;
+}
+.home .services #service-3 .circle {
+  background: #fdd345;
+}
+.home .services .workshop {
+  text-align: center;
+}
+.home .services .workshop p {
+  color: #3483cb;
+}
+.home .services #ux-workshop h3 {
+  color: #1b4a75;
+  font-size: 2em;
+}
+.home .services #pk-evergreen h3 {
+  color: #34c17d;
+  font-size: 2em;
+}
+.home .team {
+  margin-top: 100px;
+  display: flex;
+  align-items: stretch;
+}
+.home .team .instagram-intro {
+  margin-bottom: 12px;
+  width: 400px;
+}
+.home .team .instagram-intro .content {
+  padding: 10px 30px;
+  background-color: #3483cb;
+  height: 270px;
+}
+.home .team .instagram-intro .content p {
+  font-size: 1.6em;
+  font-weight: lighter;
+}
+.home .team .instafeed {
+  height: 300px;
+}
+.home .team .instagram-photo {
+  margin-bottom: 12px;
+}
+.home .team .instagram-meet-team {
+  background-color: #fdd345;
+  color: #1b4a75;
+  padding: 30px;
+  height: 270px;
+}
+.home .team img {
+  max-width: 100%;
+  width: 100%;
+}
+.footer {
+  background: #3483cb;
+  height: 500px;
+  margin: 100px 0 0 0;
+}
+.footer .center {
+  float: none;
+  margin: 0 auto;
+  text-align: center;
+}
+.footer .logo {
+  font-size: 3em;
+  margin: 117px 0 50px 0;
+}
+.footer .hello {
+  font-size: 3em;
+}
+.footer .email {
+  font-size: 1.5em;
+  font-weight: lighter;
+  color: #fff;
+}

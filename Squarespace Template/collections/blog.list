@@ -1,0 +1,58 @@
+<div class="container project">
+
+    <div id="filters" class="button-group">  
+        <button class="button is-checked" data-filter="*">All</button>
+        {.repeated section collection.categories}
+            <button class="button" data-filter=".{@}">{@}</button>
+        {.end}
+    </div>
+
+    <div class="grid">
+
+        {.repeated section items}
+
+            <div class="col-xs-12 col-sm-6 col-md-3 grid-item {.repeated section categories} {@} {.end}">
+                <a href="{fullUrl}">
+                    <article id="post-{id}" class="{@|item-classes}" data-item-id="{id}">
+                        <img src="{assetUrl}">
+                        <div class="article-content">
+                            <span class="date"><time datetime="{addedOn|date %F}">{addedOn|date %d %B %Y}</time></span>
+                            <h3>{title}</h3>
+                            {excerpt}
+                        </div>
+                    </article>
+                </a>
+            </div>
+
+        {.end}
+
+        <div class="clearer"></div>
+    </div>
+
+    <!--PAGINATION-->
+
+    {.if pagination}
+      <nav>
+
+        <!--NEWER PAGE-->
+
+        {.if pagination.prevPage}
+          <a href="{pagination.prevPageUrl}">Newer</a>
+        {.or}
+          <a class="disabled">Newer</a>
+        {.end}
+
+        <!--OLDER PAGE-->
+
+        {.if pagination.nextPage}
+          <a href="{pagination.nextPageUrl}">Older</a>
+        {.or}
+          <a class="disabled">Older</a>
+        {.end}
+
+      </nav>
+    {.end}
+
+    <div class="clearer"></div>
+
+</div>

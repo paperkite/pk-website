@@ -1,0 +1,25 @@
+<div class="container project team-page">
+
+    <squarespace:block-field id="the-team-intro" columns="12" lock-layout="true"/>
+
+
+    <div class="grid">
+    
+        {.repeated section items}
+
+            <div class="member col-xs-12 col-sm-4">
+                <img src="{assetUrl}">
+                <div class="content">
+                    <h3>{title}</h3>
+                    <span class="role">{customContent.role}</span> <br/>
+                    <span class="twitter-handle">{customContent.twitterHandle}</span>
+                </div>
+            </div>
+
+        {.end}
+
+    </div>
+
+    <div class="clearer"></div>
+
+</div>

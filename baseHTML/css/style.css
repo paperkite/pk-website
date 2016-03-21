@@ -1,6 +1,86 @@
+/*
+  Bootstrap Carousel Fade Transition (for Bootstrap 3.3.x)
+  CSS from:       http://codepen.io/transportedman/pen/NPWRGq
+  and:            http://stackoverflow.com/questions/18548731/bootstrap-3-carousel-fading-to-new-slide-instead-of-sliding-to-new-slide
+  Inspired from:  http://codepen.io/Rowno/pen/Afykb 
+*/
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+}
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+/*
+  WHAT IS NEW IN 3.3: "Added transforms to improve carousel performance in modern browsers."
+  Need to override the 3.3 new styles for modern browsers & apply opacity
+*/
+@media all and (transform-3d), (-webkit-transform-3d) {
+  .carousel-fade .carousel-inner > .item.next,
+  .carousel-fade .carousel-inner > .item.active.right {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  .carousel-fade .carousel-inner > .item.prev,
+  .carousel-fade .carousel-inner > .item.active.left {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  .carousel-fade .carousel-inner > .item.next.left,
+  .carousel-fade .carousel-inner > .item.prev.right,
+  .carousel-fade .carousel-inner > .item.active {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@font-face {
+  font-family: 'OpenSans-Light';
+  src: url('../fonts/opensans-light-webfont.eot');
+  src: url('../fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans-light-webfont.woff2') format('woff2'), url('../fonts/opensans-light-webfont.woff') format('woff'), url('../fonts/opensans-light-webfont.ttf') format('truetype'), url('../fonts/opensans-light-webfont.svg#opensans-light-webfont') format('svg');
+  
+  /* IE9 Compat Modes */
+}
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: url('../fonts/opensans-regular-webfont.eot');
+  src: url('../fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans-regular-webfont.woff2') format('woff2'), url('../fonts/opensans-regular-webfont.woff') format('woff'), url('../fonts/opensans-regular-webfont.ttf') format('truetype'), url('../fonts/opensans-regular-webfont.svg#opensans-regular-webfont') format('svg');
+  
+  /* IE9 Compat Modes */
+}
+@font-face {
+  font-family: 'VAGRounded';
+  src: url('../fonts/VAGRoundedStd-Thin.eot');
+  src: url('../fonts/VAGRoundedStd-Thin.eot?#iefix') format('embedded-opentype'), url('../fonts/VAGRoundedStd-Thin.woff') format('woff'), url('../fonts/VAGRoundedStd-Thin.ttf') format('truetype'), url('../fonts/VAGRoundedStd-Thin.svg#VAGRoundedStd-Thin') format('svg');
+  
+  /* IE9 Compat Modes */
+}
+.opensans-light {
+  font-family: "OpenSans-Light", sans-serif;
+}
+.opensans-regular {
+  font-family: "OpenSans-Regular", sans-serif;
+}
+.vagrounder {
+  font-family: "VAGRounded", sans-serif;
+}
 body {
   color: #fff;
-  background: url("../assets/background.jpg") right center no-repeat;
 }
 .clearer {
   clear: both;
@@ -11,16 +91,78 @@ body {
 .float-right {
   float: right;
 }
-.header {
+.project .header {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background: #3483cb;
+}
+.project .header .project-name {
+  font-size: 2em;
+  color: #fdd345;
+}
+.project .header .project-excerpt {
+  margin: 20px 0 0 0;
+  font-size: 3em;
+}
+.project #content h1,
+.project #content h2,
+.project #content p {
+  margin-left: 226px;
+  max-width: 700px;
+}
+.project #content p {
+  color: #2C2C2C;
+  font-size: 1.4em;
+}
+.project #content img {
+  width: 100%;
+}
+.project #content h1 {
+  font-size: 2em;
+  margin-top: 50px;
+  color: #939597;
+}
+.project #content h2 {
+  margin-top: 50px;
+  color: #939597;
+}
+.project #content .image-caption {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0.9em;
+}
+@media (max-width: 1200px) {
+  .project #content h1,
+  .project #content h2,
+  .project #content p {
+    margin-left: 126px;
+    max-width: 700px;
+  }
+}
+@media (max-width: 992px) {
+  .project #content {
+    padding: 0 15px;
+  }
+  .project #content h1,
+  .project #content h2,
+  .project #content p {
+    margin-left: 0px;
+    max-width: 100%;
+  }
+}
+.home {
+  background: url("../assets/background.jpg") right center no-repeat;
+}
+.home .header {
   background: url("../assets/header_background.png") center;
   background-size: cover;
   height: 700px;
 }
-.header .site-logo {
+.home .header .site-logo {
   margin: 100px 0 0 0;
   width: 300px;
 }
-.header .site-tagline {
+.home .header .site-tagline {
   margin: 100px 0 0 0;
   font-size: 4em;
 }
@@ -44,6 +186,22 @@ body {
 .home .testamonials p {
   font-size: 2.5em;
 }
+.home .testamonials .item {
+  text-align: center;
+  min-height: 300px;
+}
+.home .testamonials .carousel-indicators li {
+  margin: 0 10px;
+  border-radius: 50%;
+  border: #3483cb 2px solid !important;
+  background-color: #fff !important;
+  width: 30px;
+  height: 30px;
+}
+.home .testamonials .carousel-indicators .active {
+  border: #3483cb 0px solid !important;
+  background-color: #fdd345 !important;
+}
 .home .testamonials .center {
   padding: 20px 0 0 50px;
   background: url("../assets/quote.jpg") no-repeat;
@@ -54,7 +212,7 @@ body {
   color: #ef5a46;
   font-size: 1.6em;
   text-transform: uppercase;
-  margin: 20px 0;
+  margin: 20px 0 45px 0;
 }
 .home .testamonials a {
   color: #1b4a75;
@@ -124,12 +282,9 @@ body {
 }
 .home .team {
   margin-top: 100px;
-  display: flex;
-  align-items: stretch;
 }
 .home .team .instagram-intro {
   margin-bottom: 12px;
-  width: 400px;
 }
 .home .team .instagram-intro .content {
   padding: 10px 30px;
@@ -137,7 +292,7 @@ body {
   height: 270px;
 }
 .home .team .instagram-intro .content p {
-  font-size: 1.6em;
+  font-size: 1.4em;
   font-weight: lighter;
 }
 .home .team .instafeed {
@@ -146,11 +301,17 @@ body {
 .home .team .instagram-photo {
   margin-bottom: 12px;
 }
+.home .team .instagram-photo img {
+  border: 1px solid gray;
+}
 .home .team .instagram-meet-team {
   background-color: #fdd345;
   color: #1b4a75;
   padding: 30px;
   height: 270px;
+}
+.home .team .instagram-meet-team p {
+  font-size: 1.4em;
 }
 .home .team img {
   max-width: 100%;

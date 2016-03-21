@@ -1,12 +1,109 @@
+/*
+  Bootstrap Carousel Fade Transition (for Bootstrap 3.3.x)
+  CSS from:       http://codepen.io/transportedman/pen/NPWRGq
+  and:            http://stackoverflow.com/questions/18548731/bootstrap-3-carousel-fading-to-new-slide-instead-of-sliding-to-new-slide
+  Inspired from:  http://codepen.io/Rowno/pen/Afykb 
+*/
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+}
+
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+/*
+  WHAT IS NEW IN 3.3: "Added transforms to improve carousel performance in modern browsers."
+  Need to override the 3.3 new styles for modern browsers & apply opacity
+*/
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,
+    .carousel-fade .carousel-inner > .item.active.right {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.prev,
+    .carousel-fade .carousel-inner > .item.active.left {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.next.left,
+    .carousel-fade .carousel-inner > .item.prev.right,
+    .carousel-fade .carousel-inner > .item.active {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+}
+
 @pk-blue: #3483CB; 
 @pk-orange: #EF5A46; 
 @pk-yellow: #FDD345; 
 @pk-green: #34C17D; 
 @pk-dark-blue: #1B4A75; 
 
+@font-face {
+  font-family: 'OpenSans-Light';
+  src: url('../fonts/opensans-light-webfont.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/opensans-light-webfont.woff2') format('woff2'), 
+       url('../fonts/opensans-light-webfont.woff') format('woff'), 
+       url('../fonts/opensans-light-webfont.ttf')  format('truetype'),
+       url('../fonts/opensans-light-webfont.svg#opensans-light-webfont') format('svg');
+}
+
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: url('../fonts/opensans-regular-webfont.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/opensans-regular-webfont.woff2') format('woff2'), 
+       url('../fonts/opensans-regular-webfont.woff') format('woff'), 
+       url('../fonts/opensans-regular-webfont.ttf')  format('truetype'),
+       url('../fonts/opensans-regular-webfont.svg#opensans-regular-webfont') format('svg');
+}
+
+@font-face {
+  font-family: 'VAGRounded';
+  src: url('../fonts/VAGRoundedStd-Thin.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/VAGRoundedStd-Thin.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/VAGRoundedStd-Thin.woff') format('woff'), 
+       url('../fonts/VAGRoundedStd-Thin.ttf')  format('truetype'),
+       url('../fonts/VAGRoundedStd-Thin.svg#VAGRoundedStd-Thin') format('svg');
+}
+
+.opensans-light {
+   	font-family: "OpenSans-Light",sans-serif;
+}
+
+.opensans-regular {
+   	font-family: "OpenSans-Regular",sans-serif;
+}
+
+.vagrounder {
+   	font-family: "VAGRounded",sans-serif;
+}
+
 body {
 	color: #fff;
-	background: url("../assets/background.jpg") right center no-repeat;
 }
 
 .clearer{ 
@@ -20,23 +117,102 @@ body {
 	float: right;
 }
 
-.header {
-	background: url("../assets/header_background.png") center;
-	background-size: cover;
-	height: 700px;
+.project {
 
-	.site-logo {
-		margin: 100px 0 0 0;
-		width: 300px;
+	.header {
+
+		padding-top: 200px;
+		padding-bottom: 200px;
+		background: @pk-blue;
+
+		.project-name {
+			font-size: 2em;
+			color: @pk-yellow;
+		}
+
+		.project-excerpt {
+			margin: 20px 0 0 0;
+			font-size: 3em;
+		}
 	}
 
-	.site-tagline {
-		margin: 100px 0 0 0;
-		font-size: 4em;
+	#content {
+
+		h1, h2, p {
+			margin-left: 226px;
+    		max-width: 700px;
+		}
+
+		p {
+			color: #2C2C2C;
+			font-size: 1.4em;
+		}
+
+		img {
+			width: 100%;
+		}
+
+		h1 {
+			font-size: 2em;
+			margin-top: 50px;
+			color: #939597;
+		}
+
+		h2 {
+			margin-top: 50px;
+			color: #939597;
+		}
+
+		.image-caption {
+			margin-top: 10px;
+			text-align: center;
+			font-size: 0.9em;
+		}
+
+	}
+
+}
+
+@media(max-width:1200px){
+	.project #content {
+		
+		h1, h2, p {
+			margin-left: 126px;
+    		max-width: 700px;
+		}
+	}
+}
+@media(max-width:992px){
+
+	.project #content {
+		padding: 0 15px;
+		
+		h1, h2, p {
+			margin-left: 0px;
+    		max-width: 100%;
+		}
 	}
 }
 
 .home {
+	
+	background: url("../assets/background.jpg") right center no-repeat;
+
+	.header {
+		background: url("../assets/header_background.png") center;
+		background-size: cover;
+		height: 700px;
+
+		.site-logo {
+			margin: 100px 0 0 0;
+			width: 300px;
+		}
+
+		.site-tagline {
+			margin: 100px 0 0 0;
+			font-size: 4em;
+		}
+	}
 
 	#content {
 		margin: 100px 0 0 0;
@@ -64,6 +240,28 @@ body {
 			font-size: 2.5em;
 		}
 
+		.item {
+			text-align: center;
+			min-height: 300px;
+		}
+
+		.carousel-indicators {
+	    
+		
+			li {
+				margin: 0 10px;
+				border-radius: 50%;
+			    border: @pk-blue 2px solid !important;
+	    		background-color: #fff !important;
+	    		width: 30px;
+	    		height: 30px;
+    		}
+
+    		.active {
+			    border: @pk-blue 0px solid !important;
+	    		background-color: @pk-yellow !important;
+    		}
+		}
 		
 		.center {
 			padding: 20px 0 0 50px;
@@ -76,7 +274,7 @@ body {
 			color: @pk-orange;
 			font-size: 1.6em;
     		text-transform: uppercase;
-    		margin:20px 0;
+    		margin: 20px 0 45px 0;
 		}
 
 		a {
@@ -174,13 +372,10 @@ body {
 	.team {
 
 		margin-top: 100px;
-		display: flex;
-		align-items: stretch;
 
 		.instagram-intro {	
 
 			margin-bottom: 12px; 
-			width: 400px;
 
 			.content{
 				padding: 10px 30px;
@@ -188,7 +383,7 @@ body {
 				height: 270px;
 
 				p {
-					font-size: 1.6em;
+					font-size: 1.4em;
 					font-weight: lighter;
 				}
 			}
@@ -200,6 +395,10 @@ body {
 
 		.instagram-photo {
 			margin-bottom: 12px;
+
+			img {
+				border: 1px solid gray;
+			}
 		}
 		
 		.instagram-meet-team {
@@ -207,6 +406,10 @@ body {
 			color: @pk-dark-blue;
 			padding: 30px;
 			height: 270px;
+
+			p {
+				font-size: 1.4em;
+			}
 		}
 
 		img {

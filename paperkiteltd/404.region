@@ -1,0 +1,61 @@
+
+<body id="{squarespace.page-id}" class="blog fourhundred {squarespace.page-classes}">
+
+          <header id="header" class="header" style="background:{customContent.headerColor}">
+          
+          <div class="container">
+
+            <nav class="navigation navbar navbar-default navbar-fixed-top">
+              <div class="container-fluid">
+
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-fixed-top" id="bs-example-navbar-collapse-1">
+                  <div class="container">
+                    
+                    <a href="/">
+                      <img class="logo hidden-xs" src="/assets/pk_logo_white.svg" alt="PaperKite Logo">
+                    </a>
+
+                    <ul class="nav navbar-nav">
+                      <li><a href="/#projects">Case Studies</a></li>
+                      <li><a href="/#services">Services</a></li>
+                      <li><a href="/blog">Blog</a></li>
+                      <li><a href="mailto:hello@paperkite.co.nz">Contact</a></li>
+                    </ul>
+
+                  </div>
+                </div><!-- /.navbar-collapse -->
+
+              </div><!-- /.container-fluid -->
+            </nav>
+
+
+          </div>
+
+        </header>
+
+        <!--Content injection point.-->
+        <main id="content" role="main" data-content-field="main-content">
+
+          <div class="container">
+              
+              <img src="/assets/pootle.svg">
+
+              <h2>Looks like this page has wandered off</h2>
+
+              <p>Please visit our <a href="/">home page</a> while we find it or take a look through our <a href="/blog">blog</a></p>
+
+          </div>
+
+        </main>
+

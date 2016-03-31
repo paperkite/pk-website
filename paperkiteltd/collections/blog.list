@@ -1,0 +1,43 @@
+<div class="container blog-home">
+
+    <div id="filters" class="button-group">  
+        <button class="button is-checked" data-filter="*">All</button>
+        {.repeated section collection.categories}
+            <button class="button" data-filter=".{@}">{@}</button>
+        {.end}
+    </div>
+
+    <div class="grid">
+
+        {.repeated section items}
+
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 grid-item {.repeated section categories} {@} {.end}">
+                <a href="{fullUrl}">
+                    <article id="post-{id}" class="{@|item-classes}" data-item-id="{id}">
+                        <div class="wrapper">
+                            <img src="{assetUrl}">
+                        </div>
+                        <div class="article-content">
+                            <span class="date"><time datetime="{addedOn|date %F}">{addedOn|date %d %B %Y}</time></span>
+                            <h3>{title}</h3>
+                            {excerpt}
+                        </div>
+                    </article>
+                </a>
+            </div>
+
+        {.end}
+
+    </div>
+
+
+    <div class="clearer"></div>
+
+    <div class="col-sm-12" id="load-more-container">
+        <a id="load-more" href="#">Load more<br/><img src="/assets/load_more.png"></a>
+        <span class="hidden">Oops that's the end :)</span>
+    </div>
+   
+    <div class="clearer"></div>
+
+</div>

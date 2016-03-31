@@ -1,0 +1,120 @@
+<body id="{squarespace.page-id}" class="project {squarespace.page-classes}">
+
+      {.section item}
+        <header id="header" class="header" style="background:{customContent.headerColor}">
+          
+          <div class="container">
+
+            <nav class="navigation navbar navbar-default navbar-fixed-top">
+              <div class="container-fluid">
+
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-fixed-top" id="bs-example-navbar-collapse-1">
+                  <div class="container">
+                    
+                    <a href="/">
+                      <img class="logo hidden-xs" src="/assets/pk_logo_white.svg" alt="PaperKite Logo">
+                    </a>
+
+                    <ul class="nav navbar-nav">
+                      <li class="active"><a href="/#projects">Case Studies</a></li>
+                      <li><a href="/#services">Services</a></li>
+                      <li><a href="/blog">Blog</a></li>
+                      <li><a href="mailto:hello@paperkite.co.nz">Contact</a></li>
+                    </ul>
+
+                  </div>
+                </div><!-- /.navbar-collapse -->
+
+              </div><!-- /.container-fluid -->
+            </nav>
+
+            <!--Project tagline.-->
+            <div class="project-header-wrapper col-md-12">
+                <div class="project-tagline col-sm-12 col-md-8">
+    	            <h1 class="project-name" style="color:{customContent.titleColor}">{title}</h1>
+    	            <span class="project-excerpt">{excerpt}</span>
+                </div>
+            </div>
+
+          </div>
+
+        </header>
+
+        <!--Content injection point.-->
+        <main id="content" role="main" data-content-field="main-content">
+
+          <div class="container project">
+
+  	         {body}
+
+          </div>
+
+        </main>
+
+      {.end}
+
+
+      {.section collection}
+          {.if tags}
+            <div class="related">
+                <div class="container">
+                    <div class="wrapper">
+                      <!--TAGS-->
+                      <div class="related-article col-xs-4">
+                          {.if tags}
+                              <h5>MORE FROM OUR BLOG</h5>
+
+                              <squarespace:query tag="{.section tags} {@} {.end}" collection="blog" limit="3">
+                                  <ul>
+                                      {.repeated section items}
+                                          <li>
+                                              <a class="tag" href="{fullUrl}">{title}</a>
+                                          </li>
+                                      {.end}
+                                  </ul>
+                              </squarespace:query>
+                          {.end}
+                      </div>
+
+                      <!--TAGS-->
+                      <div class="related-tag col-xs-4 col-xs-offset-3">
+                          {.if tags}
+                              <h5>TAGS</h5>
+                              <ul>
+                                  {.repeated section tags}
+                                      <li>
+                                          <a class="tag" href="{collection.fullUrl}?tag={@|url-encode}">{@}</a>
+                                      </li>
+                                  {.end}
+                              </ul>
+                          {.end}
+                      </div>
+                    </div>
+                </div>
+            </div>
+        {.end}
+      {.end}
+
+      {.section pagination.nextItem}
+
+        <div class="next-project" style="background-image:url({assetUrl})">
+          <img class="next-project-icon" src="/assets/next_project_icon.png">
+          <a href="{fullUrl}" style="background:url({customContent.brandLogo.assetUrl}) center center no-repeat">
+          </a>
+        </div>
+
+
+      {.end}
+
+

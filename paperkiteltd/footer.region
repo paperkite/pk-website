@@ -1,0 +1,101 @@
+        <!--Footer with open block field.-->
+        <footer id="contact" id="footer" class="footer">
+
+            <div class="top-level">
+
+                <div class="col-md-4 center">
+                    <img class="logo" src="/assets/paperkite-logo-footer.png" alt="PaperKite" />
+
+                    <squarespace:block-field class="hello" id="footer-message" columns="12" lock-layout="true"/>
+
+                    <a href="mailto:hello@paperkite.co.nz" class="email">hello@paperkite.co.nz</a>
+                </div>
+
+            </div>
+
+            <div class="bottom-level">
+
+                <div class="container">
+
+                    <div class="col-sm-12 title">
+                        Our work has reached a lot of people…
+                    </div>
+
+                    <div class="col-sm-4 stats">
+                        <p>unique users</p>
+                        <span id="unique-user">0</span>
+                    </div>
+                    
+                    <div class="col-sm-4 stats">
+                        <p>number of sessions</p>
+                        <span id="number-session">0</span>
+                    </div>
+                    
+                    <div class=" col-sm-4 stats">
+                        <p>total hours spent</p>
+                        <span id="time-spent">0</span>
+                    </div>
+
+                    <div class="clearer"></div>
+
+                    <div class="col-md-12 center">
+
+
+                        <div class="col-xs-4 copyright">
+                            <squarespace:block-field id="copyright" columns="12" lock-layout="true"/>
+                        </div>
+                       
+                       
+                        <div class="col-xs-4 made-in">
+                            <a target="_blank" href="https://www.google.co.nz/maps/place/PaperKite/@-41.2905149,174.7725274,17z/data=!3m1!4b1!4m2!3m1!1s0x6d38afdb9f7b3613:0x165f33b08f414043">
+                                Made with <img id="heart" src="/assets/heart.png"> in Wellington 
+                                <img class="img-link" src="/assets/link.png">
+                            </a>
+                        </div>              
+                       
+                        <div class="col-xs-4 follow-us">
+                            Follow us
+                            <ul>
+                                <li>
+                                    <a target="_blank" href="https://twitter.com/paperkiteltd">
+                                        <img src="/assets/twitter.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.facebook.com/PaperKite-114196375290088/?hc_location=ufi">
+                                        <img src="/assets/facebook.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.instagram.com/paperkiteltd/">
+                                        <img src="/assets/instagram.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://dribbble.com/PaperKite">
+                                        <img src="/assets/dribbble.png">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>              
+
+                    </div>
+
+                    <div class="clearer"></div>
+
+                </div>
+            </div>
+
+        </footer>
+
+
+        <!--Combo and minify the scripts when you're not logged in.-->
+        <squarespace:script src="site.js" combo="{.if authenticatedAccount}false{.or}true{.end}" />
+
+
+
+        <!--Injection point for tracking scripts and user content from the code injection tab.-->
+        {squarespace-footers}
+
+    </body>
+</html> 

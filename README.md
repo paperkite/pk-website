@@ -17,11 +17,11 @@ For general help regarding Squarespace head to [http://developers.squarespace.co
 - ```Testimonial``` page needs to have the ```URL Slug``` set to ```testimonials```.
 - On the case study page, the ```MORE FROM OUR BLOG``` will only work if the blog page has the ```URL Slug``` set to ```blog```
 
-## Content
+## Updating content
+
+First of all you need to sign-in into Squarespace. Navigate to any page of the site then hit ```Esc``` on the keyboard.
 
 ### Home Page
-
-First of all you need to sign-in into Squarespace, simply hit ```Esc``` on the keyboard.
 
 - Most of the text can be easily modified by simply clicking on it while being signed-in.
 - The project order can be modified via the ```projects``` collection.
